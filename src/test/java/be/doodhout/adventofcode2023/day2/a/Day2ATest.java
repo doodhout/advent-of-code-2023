@@ -25,7 +25,14 @@ class Day2ATest {
 
 	@Test
 	public void testOnlyOneValidGame() {
-		String recordedGames = "Game 1: red 1, blue 1";
+		String recordedGames = "Game 1: 1 red, 1 blue";
 		assertThat(day2a.calculateCubeGameIdSumForOnlyPossibleGames(recordedGames, 12, 13, 14)).isEqualTo(1);
+	}
+
+	@Test
+
+	public void testOneInvalidGame() {
+		String invalidGame = "Game 1: 500 red";
+		assertThat(day2a.calculateCubeGameIdSumForOnlyPossibleGames(invalidGame, 12, 13, 14)).isEqualTo(0);
 	}
 }
