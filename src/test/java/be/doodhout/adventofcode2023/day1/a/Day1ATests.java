@@ -49,7 +49,7 @@ public class Day1ATests {
 		assertThat(day1a.calculateCalibrationValue(actualCalibrationText)).isEqualTo(54573);
 	}
 
-	private String actualCalibrationText = """
+	public static String actualCalibrationText = """
 			xt36five77
 			two8five6zfrtjj
 			eightthree8fiveqjgsdzgnnineeight
