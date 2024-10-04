@@ -20,6 +20,12 @@ class Day2ATest {
 
 	@Test
 	public void testEmptyStringGivesSumOfZero() {
-		assertThat(day2a.calculateCubeGameIdSumForOnlyPossibleGames("")).isEqualTo(0);
+		assertThat(day2a.calculateCubeGameIdSumForOnlyPossibleGames("", 12, 13, 14)).isEqualTo(0);
+	}
+
+	@Test
+	public void testOnlyOneValidGame() {
+		String recordedGames = "Game 1: red 1, blue 1";
+		assertThat(day2a.calculateCubeGameIdSumForOnlyPossibleGames(recordedGames, 12, 13, 14)).isEqualTo(1);
 	}
 }
